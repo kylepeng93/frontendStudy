@@ -1,0 +1,17 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 200px;
+    width: 400px;
+    background: rgb(253, 152, 153);
+}
+
+.center-me {
+    margin: auto;
+}
+

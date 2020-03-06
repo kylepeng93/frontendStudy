@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    height: 100vh;
+    border: 10px solid rgb(0,0,0);
+    display: flex;
+}
+
+.child1 {
+    flex: 1; /*对子元素使用flex属性来决定它的宽度，或者说宽度的占比*/
+    order: 2;
+    height: 100px;
+    width: 100px;
+    background: rgb(22, 82, 231)
+}
+
+.child2 {
+    flex: 1;
+    order: 1;
+    height: 100px;
+    width: 100px;
+    background: rgb(123,234,1);
+}
+
+.child3 {
+    flex: 1;
+    order: 3; /*默认是0*/
+    height: 100px;
+    width: 100px;
+    background: rgb(200,11,22);
+}
