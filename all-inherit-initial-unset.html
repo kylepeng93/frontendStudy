@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                color: green;
+                box-sizing: border-box;
+                font-weight: 700;
+                
+            }       
+            .my-class-1 a {
+                /*继承body的字体颜色*/
+                color: inherit;
+            }
+                    
+            .my-class-2 a {
+                /*和浏览器的默认字体颜色一致，即为黑色*/
+                color: initial;
+            }
+                    
+            .my-class-3 a {
+                /*由于字体颜色是可继承属性，因此表现为inherit样式，继承body的字体颜色*/
+                color: unset;
+            }
+    
+            blockquote {
+                background: red;
+                border: 1px solid rgb(2,10,10);
+                padding: 30px;
+            }
+            .fix-it {
+                /*all有3个属性值：
+                    1. inherit：继承父元素的全部属性；
+                    2. initial: 和浏览器的默认样式相同；
+                    3. unset：取决于属性是否是自然继承，如果是，则表现为inherit，如果不是，则表现未initial*/
+                all: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <blockquote>
+            this is is a styled area.
+        </blockquote>
+        <blockquote class="fix-it">
+            this is no style area.
+        </blockquote>
+        <ul>
+            <li>Default <a href="#">link</a> color</li>
+            <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+            <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+            <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+        </ul>
+    </body>
+</html>
