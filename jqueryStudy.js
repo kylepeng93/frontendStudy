@@ -68,4 +68,8 @@ $(document).ready(function () {
 
     var rex = /[\u4e00-\u9fa5]+/;
     console.log(rex.test('魑魅魍魉'));
+
+    console.log(new Date('2020-02-01 12:00:12'));
+
+    console.log(/^[\u4E00-\u9FA5]{2,4}$/.test("西门吹雪"));// 检测长度为2到4个汉字的中文名字
 });

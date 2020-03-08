@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                box-sizing: border-box;
+            }
+            div p {
+                color: rgb(131,175,155);
+            }
+            div > p {
+                color: rgb(254,200,169);
+            }
+            div > a {
+                color: rgb(255,100,200);
+            }
+            div + p {
+                color: rgb(254,100,100);
+            }
+            p {
+                color: rgb(254,254,0);
+            }
+            [target] {
+                color: rgb(0,255,200);
+            }
+            [target=_blank] {
+                color: rgb(0,100,255);
+            }
+            [title|=baidu] {
+                color: rgb(100,150,200);
+            }
+            [title~=baidu] {
+                color: rgb(254,50,0);
+            }
+            p:first-line {
+                color: rgb(200,0,250);
+            }
+            p:first-child {
+                color: rgb(200,200,200)
+            }
+            /* p:first-of-type {
+                color: rgb(100,10,250);
+            } */
+            p:nth-child(even):hover{
+                border: 5px double rgb(254,254,0);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>我是div里面的p标签
+                <p>我是p标签中的第一个p标签</p>
+            </p>
+            <a target="_blank" href="#" title="baidu">百度一下</a>
+        </div>
+        <!-- <span>这是一个介于div和p标签之间的span元素</span> -->
+        <p>
+            我不是div里面的p标签1
+        </p>
+        <p>
+            我不是div里面的p标签2
+        </p>
+    </body>
+</html>
