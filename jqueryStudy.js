@@ -72,4 +72,48 @@ $(document).ready(function () {
     console.log(new Date('2020-02-01 12:00:12'));
 
     console.log(/^[\u4E00-\u9FA5]{2,4}$/.test("西门吹雪"));// 检测长度为2到4个汉字的中文名字
+
+    $(".center-me").on("mouseleave", function() {
+        console.log("mouseLeave");
+    })
+    var counter;
+    $("[data-toggle='popover']").popover({
+        trigger: 'manual',
+        html: true,
+        animation: true,
+        content: setContent,
+        title: setTitle
+    }).on("mouseover", function(){
+        var _self = this;
+        // 清空计时器
+        clearTimeout(counter);
+        counter = setTimeout(function(){
+            // 当鼠标放到popover启动元素上面时
+            if($(_self).is(':hover')){
+                $(_self).popover('show');
+            }
+            $('.popover').on("mouseleave", function(){
+                $(_self).popover('hide');
+            })
+        },400);
+    }).on("mouseleave", function(){
+        var _self = this;
+        if(!$('.popover:hover').length) {
+            // 当鼠标不在popover窗口上方的时候
+            if(!$(_self).is(':hover').length) {
+                // 当鼠标同时也不在popover触发元素上方时
+                $(_self).popover('hide');
+            }
+        }
+    });
+    function setContent() {
+        if(true) {
+            return "你是谁";
+        }
+    }
+    function setTitle() {
+        if(true) {
+            return '';
+        }
+    }
 });

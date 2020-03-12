@@ -15,3 +15,12 @@
     margin: auto;
 }
 
+@keyframes example-anima {
+    from {
+        background-color: rgb(255,100,100);
+    }
+    to {
+        background-color: rgb(0,255,255);
+    }
+}
+
