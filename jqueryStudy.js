@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("#btn-name").click(function() {
+        alert("张慧");
+    });
     $('.center-me').click(function() {
         // 点击p标签内的内容会触发点击事件
         // 通过$(this)可以使用jquery提供的方法
@@ -116,4 +119,9 @@ $(document).ready(function () {
             return '';
         }
     }
+    function sum (a, b) {
+        return a + b;
+    }
+    var c  = sum(2,3);
+    console.log("sum(2,3) = " + c);
 });
